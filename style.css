@@ -2,7 +2,7 @@
 
 body {
     font-family: Roboto, sans-serif;
-    /* background-image: url("images/patt.png"); */
+    background-image: url("images/patt.png");
 }
 
 * {
@@ -37,5 +37,9 @@ body {
 }
 .col-6-md {
 width: 50%;
+}
+.header {
+    background-color: rgba(265, 265, 265, 0.75 );
+    padding: 25px 0;
 }
 
