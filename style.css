@@ -237,6 +237,22 @@ body {
   border-right: 1px solid #fff;
   padding: 30px 30px 15px 30px;
 }
+.aside_block input[type="checkbox"] {
+  display: none;
+}
+.aside_block label::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border: 1px solid #fff;
+  margin-right: 10px;
+  margin-bottom: 1px;
+}
+.aside_block input[type="checkbox"]:checked + label::before {
+  background-color: #fff;
+}
+
 .left_aside_content:not(:last-of-type) {
   margin-bottom: 43px;
 }
