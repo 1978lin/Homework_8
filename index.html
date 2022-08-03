@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
     <link rel="stylesheet" href="style.css">
     <title>Homework_8</title>
 </head>
@@ -58,9 +60,7 @@
                         </div>
                         <div class="col-md-3">
                             <div class="basket">
-                                <div class="cart_count">
-                                    <span>0</span>
-                                </div>
+                                <div class="cart_count" id="cart_count">0</div>
                             </div>
                         </div>
                     </div>
@@ -72,10 +72,13 @@
     <div class="slider">
         <div class="container">
             <div class="row"></div>
-            <div class="col-md-12">
-                <div class="slider_content">Slide # 3</div>
+            <div class="slider_block">
+                <div>Slide 1</div>
+                <div>Slide 2</div>
+                <div>Slide 3</div>
             </div>
         </div>
+    </div>
     </div>
 
     <main class="main">
@@ -452,8 +455,36 @@
         </div>
     </footer>
 
+    <div class="modal">
+        <div class="modal_block">
+            <form action=" ">
+                <div class="btn_close_block">
+                    <button class="close_btn">x</button>
+                </div>
+                <div class="form_title">
+                    <h3>Please call for more details</h3>
+                </div>
+                <div class="form_field">
+                    <input type="text" placeholder="Your Name">
+                </div>
+                <div class="form_field">
+                    <input type="text" placeholder="Your Phone">
+                </div>
+                <div class="form_btn">
+                    <button class="btn">Please call</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+
     </div>
     <script src="https://kit.fontawesome.com/713459fbca.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
