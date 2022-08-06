@@ -216,39 +216,53 @@ body {
 }
 /************SLIDER BLOCK*******************************/
 .slider {
-  /* background-color: rgba(0, 0, 0, 0.2); */
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
 }
 .slider_block {
-  padding: 150px 0;
-  font-size: 100px;
+  height: 400px;
   color: #fff;
-  text-align: center;
-  font-weight: 100;
+  overflow: hidden;
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+.slick-prev,
+.slick-next {
+  z-index: 1;
+  color: #fff;
+}
 .slick-prev {
   left: 10px;
-  z-index: 1;
 }
 .slick-next {
-  right: 10px;
+  right: 25px;
 }
 .slick-prev:before,
 .slick-next:before {
-  font-size: 25px;
+  font-family: Roboto, sans-serif;
+  font-size: 100px;
+  line-height: 0;
+}
+.slick-prev:before {
+  content: "‹";
+}
+.slick-next:before {
+  content: "›";
 }
 .slick-dots {
-  bottom: 5px;
+  bottom: 0;
+  height: 10%;
 }
+
 .slick-dots li button:before {
-  content: "■";
+  content: "□";
   font-size: 15px;
+  opacity: 1;
+  color: #fff;
 }
 .slick-dots li.slick-active button:before {
-  opacity: 0.75;
+  content: "■";
+  opacity: 1;
   color: #fff;
 }
 .slick-dotted.slick-slider {

@@ -40,7 +40,6 @@ itemLike.forEach((item) =>
 let moreDetailsBtn = document.querySelectorAll(".btn_more_details");
 let modalWindow = document.querySelector(".modal");
 let modalBtnClose = document.querySelector(".close_btn");
-console.log(modalBtnClose);
 
 function closeModal() {
   modalWindow.classList.remove("show");
@@ -56,7 +55,7 @@ moreDetailsBtn.forEach((item) => item.addEventListener("click", openModal));
 modalBtnClose.addEventListener("click", closeModal);
 modalWindow.addEventListener("click", closeModal);
 
-//slider
+//slider init
 
 $(".slider_block").slick({
   autoplay: true,
