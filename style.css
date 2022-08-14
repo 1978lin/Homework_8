@@ -506,10 +506,7 @@ sup {
   width: 150px;
   text-align: center;
   outline: none;
-  /* border-top: 0.5px solid #fff; */
   border: 0.5px solid #fff;
-  /* border-left: 0.5px solid #2c71b8;
-  border-right: 0.5px solid #2c71b8; */
   color: #2c71b8;
   font-family: Roboto, sans-serif;
 }
