@@ -61,3 +61,51 @@ $(".slider_block").slick({
   autoplay: true,
   dots: true,
 });
+
+//product quantity input change
+
+let decrementButtons = document.querySelectorAll(".decr_btn");
+let incrementButtons = document.querySelectorAll(".incr_btn");
+let quantityInput = document.querySelectorAll(".quantity_input");
+
+function Counter(incBtn, decBtn, inpValue, minCount = 1, maxCount = 5) {
+  this.domRefs = {
+    incBtn,
+    decBtn,
+    inpValue,
+  };
+  this.toggleButtonState = function () {
+    let count = this.domRefs.inpValue.value;
+    this.domRefs.decBtn.disabled = count <= minCount;
+    this.domRefs.incBtn.disabled = count >= maxCount;
+  };
+  this.toggleButtonState();
+
+  this.increment = function () {
+    this.domRefs.inpValue.value = +this.domRefs.inpValue.value + 1;
+    this.toggleButtonState();
+  };
+
+  this.decrement = function () {
+    this.domRefs.inpValue.value = +this.domRefs.inpValue.value - 1;
+    this.toggleButtonState();
+  };
+  this.domRefs.incBtn.addEventListener("click", this.increment.bind(this));
+  this.domRefs.decBtn.addEventListener("click", this.decrement.bind(this));
+}
+let counters = [];
+
+quantityInput.forEach((item, i) => {
+  counters[i] = new Counter(
+    incrementButtons[i],
+    decrementButtons[i],
+    quantityInput[i]
+  );
+});
+
+let counter1 = new Counter(
+  incrementButtons[i],
+  decrementButtons[i],
+  quantityInput[i]
+);
+console.log(counter1);

@@ -176,6 +176,9 @@ body {
   right: 4px;
   cursor: pointer;
 }
+.srch_btn:hover {
+  background-color: rgba(44, 113, 184, 0.8);
+}
 .basket {
   float: right;
   margin-top: 5px;
@@ -187,11 +190,11 @@ body {
   position: relative;
   cursor: pointer;
 }
-.basket:hover {
+/* .basket:hover {
   background: url(images/w_cart.png) no-repeat;
   background-position: 45%, 50%;
   background-color: #2c71b8;
-}
+} */
 .cart_count {
   width: 20px;
   height: 20px;
@@ -207,13 +210,13 @@ body {
   color: #fff;
   line-height: 20px;
 }
-.basket:hover .cart_count {
+/* .basket:hover .cart_count {
   background-color: #fff;
-}
-.basket:hover .cart_count {
+} */
+/* .basket:hover .cart_count {
   color: #2c71b8;
   font-weight: bold;
-}
+} */
 /************SLIDER BLOCK*******************************/
 .slider {
   border-top: 1px solid #fff;
@@ -508,7 +511,8 @@ sup {
   outline: none;
   border: 0.5px solid #fff;
   color: #2c71b8;
-  font-family: Roboto, sans-serif;
+  font-family: inherit;
+  font-weight: bold;
 }
 .little_btn {
   width: 20px;
