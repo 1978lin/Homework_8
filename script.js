@@ -53,7 +53,21 @@ function openModal() {
 
 moreDetailsBtn.forEach((item) => item.addEventListener("click", openModal));
 modalBtnClose.addEventListener("click", closeModal);
-modalWindow.addEventListener("click", closeModal);
+modalWindow.addEventListener("click", function (e) {
+  if (e.target === modalWindow) {
+    closeModal();
+  }
+});
+
+// Show Modal Window by scroll
+
+function showModalByScroll() {
+  if (window.pageYOffset > document.body.scrollHeight / 2) {
+    openModal();
+    window.removeEventListener("scroll", showModalByScroll);
+  }
+}
+window.addEventListener("scroll", showModalByScroll);
 
 //slider init
 
@@ -103,9 +117,9 @@ quantityInput.forEach((item, i) => {
   );
 });
 
-let counter1 = new Counter(
-  incrementButtons[i],
-  decrementButtons[i],
-  quantityInput[i]
-);
-console.log(counter1);
+// let counter1 = new Counter(
+//   incrementButtons[i],
+//   decrementButtons[i],
+//   quantityInput[i]
+// );
+// console.log(counter1);
