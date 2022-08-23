@@ -52,9 +52,9 @@ function openModal() {
 }
 
 moreDetailsBtn.forEach((item) => item.addEventListener("click", openModal));
-modalBtnClose.addEventListener("click", closeModal);
 modalWindow.addEventListener("click", function (e) {
-  if (e.target === modalWindow) {
+  if (e.target === modalWindow || e.target === modalBtnClose) {
+    e.preventDefault();
     closeModal();
   }
 });
