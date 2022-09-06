@@ -93,6 +93,7 @@ function Counter(incBtn, decBtn, inpValue, minCount = 1, maxCount = 5) {
     this.domRefs.decBtn.disabled = count <= minCount;
     this.domRefs.incBtn.disabled = count >= maxCount;
   };
+
   this.toggleButtonState();
 
   this.increment = function () {
@@ -104,6 +105,7 @@ function Counter(incBtn, decBtn, inpValue, minCount = 1, maxCount = 5) {
     this.domRefs.inpValue.value = +this.domRefs.inpValue.value - 1;
     this.toggleButtonState();
   };
+
   this.domRefs.incBtn.addEventListener("click", this.increment.bind(this));
   this.domRefs.decBtn.addEventListener("click", this.decrement.bind(this));
 }
